@@ -1,7 +1,7 @@
 import React from 'react'
 import ProductCount from './ProductCount'
 
-export const ProductCard = ({ title, text, price, stock }) => {
+export const ProductCard = ({id, title, text, price, stock }) => {
     return (
 
         <div className="flex flex-wrap p-5">
@@ -15,7 +15,7 @@ export const ProductCard = ({ title, text, price, stock }) => {
                         <div> Price : <code>{price} USD</code></div>
                         <div> Available : <code>{stock} items</code></div></div>
                         <br></br>
-                        <div className='flex justify-center'><ProductCount stock={stock}/></div>
+                        <div className='flex justify-center'><ProductCount stock={stock} id={id}/></div>
                 </div>
 
             </div></div>

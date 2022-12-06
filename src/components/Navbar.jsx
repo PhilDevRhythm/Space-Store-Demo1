@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import '../main.css';
 
 function Navbar() {
@@ -14,11 +15,13 @@ function Navbar() {
         <div className=''>
             <div className="navbar bg-stone-900">
                 <div className="flex-wrap flex-1 p-3 justify-start">
-                    <a className="normal-case text-5xl m-1 text-white font-serif">Space Store</a>
+                    
+                    <div><img src="./logo.png" alt="logo"/></div>
+                    
                     </div>
                 <div>
-                    <button className="btn  btn-md m-1 justify-self-end">Home</button>
-                    <button className="btn  btn-md m-1 justify-self-end">Store</button>
+                    <Link  to={`/`} className="btn  btn-md m-1 justify-self-end">Home</Link>
+                    <Link to={'/store'} className="btn  btn-md m-1 justify-self-end">Store</Link>
                     <button className="btn  btn-md m-1 justify-self-end">Help</button>
                 </div>
                 <div className="flex-none bg-transparent">
