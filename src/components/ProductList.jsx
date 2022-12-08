@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Loading from './Loading'
 import ProductCard from './ProductCard'
 
 const prodList = [
@@ -25,6 +26,7 @@ const ProductList = () => {
     }, [])
 
     const getProducts = () => {
+        
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(prodList)
@@ -32,11 +34,13 @@ const ProductList = () => {
         })
     }
 
-
+    
     return (
+        <><Loading/>
         <div className='flex flex-wrap'>
             {items.map(i => <ProductCard key={i.id}{...i} />)}
         </div>
+        </>
     )
 }
 
