@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/react-space-store/static/js/runtime~main.24c04d1e.js"
   },
   {
-    "revision": "c0a27a11dc31ded6b4a0e610a7506e05",
+    "revision": "c12c540e776f045d3b45bb1f3f372401",
     "url": "/react-space-store/index.html"
   }
 ];
