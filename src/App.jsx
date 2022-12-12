@@ -18,7 +18,7 @@ function App() {
        <Route path='/store/' element={<ProductList />}/>
        <Route path='/loading/' element={<Loading />}/>
        {/* <Route path='/store/:id' element={<ProductDetail/>}/> */}
-       {/* <Route path='/products/:id' element={<ProductDetail />}/> */}
+       <Route path='/products/:id' element={<ProductDetail />}/>
        {/* <Route path='/' element={<ProductList/>} />  */}
       </Routes>
       <Footer/>

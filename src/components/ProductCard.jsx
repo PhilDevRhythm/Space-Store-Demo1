@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import ProductCount from './ProductCount'
 
 export const ProductCard = ({id, title, text, price, stock }) => {
@@ -15,6 +16,8 @@ export const ProductCard = ({id, title, text, price, stock }) => {
                         <div> Price : <code>{price} USD</code></div>
                         <div> Available : <code>{stock} items</code></div></div>
                         <br></br>
+                        <Link to={`/products/${id}`} className="btn">Ver detalle</Link>
+                        <br></br>
                         <div className='flex justify-center'><ProductCount stock={stock} id={id}/></div>
                 </div>
 
@@ -25,3 +28,6 @@ export const ProductCard = ({id, title, text, price, stock }) => {
 }
 
 export default ProductCard
+
+
+{/* <ProductCount stock={stock} id={id}/> */}

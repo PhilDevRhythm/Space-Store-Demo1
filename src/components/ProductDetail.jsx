@@ -17,7 +17,7 @@ function ProductDetail() {
 
     const getItemDetail = async () => {
         return new Promise ((resolve, reject) => {
-            const item = ProdList.find(p => p.id == id)
+            const item = ProdList.find(p => p.id === id)
             setTimeout(() => {resolve( item )}, 2000);
             
         })
@@ -26,7 +26,11 @@ function ProductDetail() {
 return (
     
     <div className='flex-wrap'>
-       <ProductCount stock={item.stock}/>
+        <h1>Detalles del producto: { id }</h1>
+        <li>{item.title}</li>
+        <li>{item.description}</li>
+        <li>{item.price}</li>
+        <ProductCount stock={item.stock}/>
     
     </div>
   )
